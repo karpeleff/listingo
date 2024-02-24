@@ -25,4 +25,17 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    public function addNote()
+    {
+        return view('addNote');
+    }
+    public function mainPage()
+    {
+        return view('mainpage');
+    }
+    public function storePage(Request $request)
+    {
+        //return view('mainpage');
+    }
 }
