@@ -24,7 +24,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $data = Post::all();
+       // return view('home');
+        return view('home')->with('posts', $data);
     }
 
     public function addNote()
@@ -44,4 +46,14 @@ class HomeController extends Controller
         return 'ok';
 
     }
+
+    public function store(Request $request)
+    {
+        $data = Post::create($request->all());
+
+       // return response()->json(null,201);
+
+        return view('addNote_POST');
+    }
+
 }

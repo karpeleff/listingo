@@ -6,20 +6,26 @@
             <div class="card-header"> JUST  POST </div>
             <div class="card-body">
                 <div class="form-group ">
-                    <input  type="text" class="form-control  "  placeholder="Name" />
-                </div>
+                    <form  action="{{ route('store') }}"  method="post"  >
+                        {{ csrf_field() }}
+                        <input  type="text"  name="name"  class="form-control  "  placeholder="Name" />
+
                 <div class="form-group">
-                    <input   type="text" class="form-control"  placeholder="Contact" />
+                    <input   type="text"  name="contact" class="form-control"  placeholder="Contact" />
                 </div>
                 <div class="form-group ">
-                    <input    type="text" class="form-control  "  placeholder="Text" />
+                    <input    type="text"  name="text" class="form-control  "  placeholder="Text" />
                 </div>
                 <div class="form-group ">
 
-                    <input   type="text" class="form-control  "  placeholder="img" />
+                    <input   type="text"   name="img" class="form-control  "  placeholder="img" />
                 </div>
-                <button class="btn btn-sm btn-primary   ">Post Data</button>
-                <button class="btn btn-sm btn-warning  ">Clear</button>
+                <button type="submit" class="btn btn-primary">
+                   фяаыфявпи
+                </button>
+
+                    </form>
+
 
             </div>
         </div>
