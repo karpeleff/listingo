@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Post;
 
 class HomeController extends Controller
 {
@@ -13,7 +14,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+      //  $this->middleware('auth');
     }
 
     /**
@@ -34,8 +35,12 @@ class HomeController extends Controller
     {
         return view('mainpage');
     }
-    public function storePage(Request $request)
+    public function addItem(Request $request)
     {
-        //return view('mainpage');
+      //  $data = Post::create($request->all());
+
+        //return response()->json(null,201);
+        return 'ok';
+
     }
 }

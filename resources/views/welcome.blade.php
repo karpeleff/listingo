@@ -4,7 +4,19 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+
         <title>Laravel</title>
+
+        <div class="dropdown">
+            <button class="  me-2 btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Локация
+            </button>
+            <ul class="dropdown-menu">
+                <li><button class="dropdown-item" type="button">Рощино</button></li>
+                <li><button class="dropdown-item" type="button">Крутой Яр</button></li>
+                <li><button class="dropdown-item" type="button">Восток</button></li>
+            </ul>
+        </div>
 
         <!-- Fonts -->
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">

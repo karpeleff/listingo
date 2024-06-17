@@ -23,3 +23,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/mainpage', [App\Http\Controllers\HomeController::class, 'mainPage'])->name('mainpage');
 Route::get('/addnote', [App\Http\Controllers\HomeController::class, 'addNote'])->name('addnote');
+Route::post('/additem', [App\Http\Controllers\HomeController::class, 'addItem'])->name('additem');
+Route::post('/store', [App\Http\Controllers\MasterController::class, 'store'])->name('store');
+Route::get('/storeview', [App\Http\Controllers\MasterController::class, 'index'])->name('index');

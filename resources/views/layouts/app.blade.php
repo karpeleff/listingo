@@ -4,17 +4,22 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'ServiceBox') }}</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
-    <!-- Scripts -->
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+
+
+
+</head>
+
+
 </head>
 <body>
     <div id="app">
@@ -22,18 +27,30 @@
             <div class="container">
 
 
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand  " href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
+                <form class="d-flex  ">
 
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="поиск" aria-label="Search">
+                        <select class="form-select   " aria-label="Default select example ">
+                            <option selected>Локация</option>
+                            <option value="1">Рощино</option>
+                            <option value="2">Крутой Яр</option>
+                            <option value="3">Восток</option>
+                        </select>
+
+
+
+                    <input class="form-control mx-2" type="search" placeholder="поиск" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Найти</button>
                 </form>
+
+                <autocomplete :search="search"></autocomplete>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
@@ -82,7 +99,10 @@
 
         <main class="py-4">
             @yield('content')
+
         </main>
+
     </div>
+    <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
