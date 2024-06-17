@@ -29,7 +29,8 @@ class HomeController extends Controller
 
     public function addNote()
     {
-        return view('addNote');
+       // return view('addNote');
+        return view('addNote_POST');
     }
     public function mainPage()
     {
