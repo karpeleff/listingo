@@ -28,8 +28,10 @@
 
                                             <a href="tel:{{$post->contact}}" class="btn btn-sm btn-outline-secondary">Позвонить</a>
                                         </div>
-                                        <small class="text-muted">здесь какойто текст </small>
+                                        <small class="text-muted">тел:{{$post->contact}} </small>
                                     </div>
+
+                                    <button type="button" class="btn btn-danger">Danger</button>
                                 </div>
                             </div>
                         </div>
