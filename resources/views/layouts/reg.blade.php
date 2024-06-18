@@ -14,38 +14,11 @@
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
-
-
-
-</head>
-
-
 </head>
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm navbar sticky-top " >
             <div class="container">
-
-
-                <a class="navbar-brand  " href="{{ url('/home') }}">
-                    {{ config('app.name', 'ServiceBox') }}
-                </a>
-                <form class="d-flex  ">
-
-                        <select class="form-select   " aria-label="Default select example ">
-                            <option selected>Локация</option>
-                            <option value="1">Рощино</option>
-                            <option value="2">Крутой Яр</option>
-                            <option value="3">Восток</option>
-                        </select>
-
-
-
-                    <input class="form-control mx-2" type="search" placeholder="поиск" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Найти</button>
-                </form>
-
-                <autocomplete :search="search"></autocomplete>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>

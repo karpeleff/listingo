@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.reg')
 
 @section('content')
 <div class="container">
@@ -6,7 +6,6 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Register') }}</div>
-,prigbspobmspdht
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf

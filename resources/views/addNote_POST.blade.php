@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <div class="card">
-            <div class="card-header"> JUST  POST </div>
+            <div class="card-header"> Добавить Контакт </div>
             <div class="card-body">
                 <div class="form-group ">
                     <form  action="{{ route('store') }}"  method="post"  >
@@ -21,7 +21,7 @@
                     <input   type="text"   name="img" class="form-control  "  placeholder="img" />
                 </div>
                 <button type="submit" class="btn btn-primary">
-                   фяаыфявпи
+                   Сохранить
                 </button>
 
                     </form>
