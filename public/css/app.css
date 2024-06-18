@@ -3998,6 +3998,7 @@ textarea.form-control-lg {
 }
 
 .navbar-toggler {
+
   padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);
   font-size: var(--bs-navbar-toggler-font-size);
   line-height: 1;

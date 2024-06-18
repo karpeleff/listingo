@@ -58,12 +58,13 @@ class HomeController extends Controller
 
     public function del($id)
         {
+    if(!empty($id))
+    {
+    $post = Post::find($id);
+    $post->delete();
+    }
 
-          $post = Post::find($id);
-
-            $post->delete();
-
-            return  $this->index();
+    return  $this->index();
         }
 
 }
