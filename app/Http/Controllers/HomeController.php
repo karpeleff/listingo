@@ -56,4 +56,14 @@ class HomeController extends Controller
         return view('addNote_POST');
     }
 
+    public function del($id)
+        {
+
+          $post = Post::find($id);
+
+            $post->delete();
+
+            return  $this->index();
+        }
+
 }

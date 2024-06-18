@@ -27,11 +27,17 @@
                                                rel="noopener noreferrer">WhatsApp</a>
 
                                             <a href="tel:{{$post->contact}}" class="btn btn-sm btn-outline-secondary">Позвонить</a>
+                                            @role('Admin')
+
+                                            <a href="del/{{$post->id}}" class="btn btn-sm btn-outline-secondary">Удалить</a>
+                                                @endrole
+
+
                                         </div>
                                         <small class="text-muted">тел:{{$post->contact}} </small>
                                     </div>
 
-                                    <button type="button" class="btn btn-danger">Danger</button>
+
                                 </div>
                             </div>
                         </div>

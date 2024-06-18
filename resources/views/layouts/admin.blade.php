@@ -4,54 +4,40 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>ServiceBox</title>
+    <title>{{ config('app.name', 'Laravel') }}</title>
+
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
-
-
-
-</head>
-
-
+    <!-- Styles -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="16x16" href={{asset("assets/images/favicons/favicon-16x16.png")}}>
+    <style>
+        a {
+            text-decoration: none; /* Отменяем подчеркивание у ссылки */
+        }
+    </style>
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm navbar sticky-top " >
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
 
-
-                <a class="navbar-brand  " href="{{ url('/home') }}">
-                   ServiceBox
+                <a class="navbar-brand" href="{{ url('/') }}">
+                    {{ config('app.name', 'Laravel') }}
                 </a>
-                <form class="d-flex  ">
-
-                        <select class="form-select   " aria-label="Default select example ">
-                            <option selected>Локация</option>
-                            <option value="1">Рощино</option>
-                            <option value="2">Крутой Яр</option>
-                            <option value="3">Восток</option>
-                        </select>
-
-
-
-                    <input class="form-control mx-2" type="search" placeholder="поиск" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Найти</button>
-                </form>
-
-                <autocomplete :search="search"></autocomplete>
-
+                <img src= {{asset("assets/images/favicons/logo.png" )}} width="50" height="50">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
-
+                @role('Admin')
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
@@ -60,17 +46,23 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
+                        <li><a class="nav-link" href="{{ route('home') }}">Dashboard</a></li>
+                        <li><a class="nav-link" href="{{ route('users.index') }}">Manage Users</a></li>
+                        <li><a class="nav-link" href="{{ route('roles.index') }}">Manage Role</a></li>
+
                         <!-- Authentication Links -->
+                    @endrole
+
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Войти') }}</a>
                                 </li>
                             @endif
 
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Регистрация') }}</a>
                                 </li>
                             @endif
                         @else
@@ -85,9 +77,7 @@
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
-                                    <a class="dropdown-item" href="{{ route('addnote') }}">add</a>
-                                    <a class="dropdown-item" href="{{ route('users.index') }}">Manage Users</a>
-                                    <a class="dropdown-item" href="{{ route('roles.index') }}">Manage Role</a>
+
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>
@@ -101,10 +91,7 @@
 
         <main class="py-4">
             @yield('content')
-
         </main>
-
     </div>
-    <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>

@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\RoleController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,3 +29,10 @@ Route::get('/addnote', [App\Http\Controllers\HomeController::class, 'addNote'])-
 Route::post('/additem', [App\Http\Controllers\HomeController::class, 'addItem'])->name('additem');
 Route::post('/store', [App\Http\Controllers\HomeController::class, 'store'])->name('store');
 Route::get('/storeview', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
+Route::get('/del/{id}', [App\Http\Controllers\HomeController::class, 'del'])->name('del');
+
+
+Route::group(['middleware' => ['auth']], function() {
+    Route::resource('roles', RoleController::class);
+    Route::resource('users', UserController::class);
+});
