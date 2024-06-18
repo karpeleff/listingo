@@ -11,7 +11,11 @@
 
                         <div class="col">
                             <div class="card shadow-sm">
-                                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" aria-label="Placeholder: Thumbnail" preserveaspectratio="xMidYMid slice" role="img" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                                <img
+                                    class="fit-picture"
+                                    src=" {{ asset('img/logo.png')}}"
+                                    alt="Grapefruit slice atop a pile of other slices" />
+
 
                                 <div class="card-body">
                                     <p class="card-text">{{ $post->text }}</p>

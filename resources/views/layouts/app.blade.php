@@ -28,7 +28,7 @@
 
 
                 <a class="navbar-brand  " href="{{ url('/home') }}">
-                    {{ config('app.name', 'ServiceBox') }}
+                   ServiceBox
                 </a>
                 <form class="d-flex  ">
 
