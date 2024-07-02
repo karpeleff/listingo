@@ -26,19 +26,19 @@
                    ServiceBox
                 </a>
                 <div class="m-2">
-                    <form class="d-flex  ">
+                    <form class="d-flex "   method="post" action="{{ route('search') }}">
+                        {{ csrf_field() }}
 
-                        <select class="form-select   " aria-label="Default select example ">
-                            <option selected>Локация</option>
-                            <option value="1">Рощино</option>
-                            <option value="2">Крутой Яр</option>
-                            <option value="3">Восток</option>
-                            <option value="4">Вострецово</option>
-                            <option value="5">Новопокровка</option>
-                            <option value="Район">Район</option>
+                        <select class="form-select "  name="location" aria-label="Default select example ">
+                            <option selected  value="Район"  >Район</option>
+                            <option value="Рощино">Рощино</option>
+                            <option value="Крутой Яр">Крутой Яр</option>
+                            <option value="Восток">Восток</option>
+                            <option value="Вострецово">Вострецово</option>
+                            <option value="Новопокровка">Новопокровка</option>
                         </select>
 
-                        <input class="form-control mx-2" type="search" placeholder="поиск" aria-label="Search">
+                        <input class="form-control mx-2"  name="search"  type="search" placeholder="поиск" aria-label="Search">
                         <button class="btn btn-outline-success" type="submit">Найти</button>
                     </form>
 

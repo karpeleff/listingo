@@ -67,4 +67,21 @@ class HomeController extends Controller
     return  $this->index();
         }
 
+    public function search(Request $request)
+    {
+
+      //  dd($request);
+
+       // $data = Post::found($request->all());   'name','LIKE',"%{$search}%"
+
+        
+        $data  = Post::where('text','LIKE', "%{$request->search}%")->get();
+
+        // return response()->json(null,201);
+
+        return view('home')->with('posts', $data);
+    }
+
+
+
 }

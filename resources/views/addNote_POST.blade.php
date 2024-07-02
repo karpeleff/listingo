@@ -22,13 +22,13 @@
 
 
                             <select class="form-select m-2  " aria-label="Default select example "  name="location"  >
-                                <option selected>Локация</option>
+                                <option selected  value="Район"  >Район</option>
                                 <option value="Рощино">Рощино</option>
                                 <option value="Крутой Яр">Крутой Яр</option>
                                 <option value="Восток">Восток</option>
                                 <option value="Вострецово">Вострецово</option>
                                 <option value="Новопокровка">Новопокровка</option>
-                                <option value="Район">Район</option>
+
 
                             </select>
 
