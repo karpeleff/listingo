@@ -38,7 +38,7 @@
                         <input class="form-control mx-2" type="search" placeholder="поиск" aria-label="Search">
                         <button class="btn btn-outline-success" type="submit">Найти</button>
                     </form>
-                 
+
                 </div>
 
 
