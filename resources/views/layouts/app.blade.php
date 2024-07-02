@@ -33,6 +33,9 @@
                             <option value="1">Рощино</option>
                             <option value="2">Крутой Яр</option>
                             <option value="3">Восток</option>
+                            <option value="4">Вострецово</option>
+                            <option value="5">Новопокровка</option>
+                            <option value="Район">Район</option>
                         </select>
 
                         <input class="form-control mx-2" type="search" placeholder="поиск" aria-label="Search">

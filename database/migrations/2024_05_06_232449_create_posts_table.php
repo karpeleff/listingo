@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('contact');
             $table->string('text');
+            $table->string('location');
             $table->string('img');
             $table->timestamps();
         });
