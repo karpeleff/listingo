@@ -10,9 +10,9 @@
                     @if (count($posts) === 1)
 
                     @elseif (count($posts) > 1)
-                    
+
                     @else
-                      Ничего не нашлось (
+                      Ничего не нашлось :(
                     @endif
 
                     @foreach ($posts as $post)
