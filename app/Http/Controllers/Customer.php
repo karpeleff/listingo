@@ -15,7 +15,9 @@ class Customer  extends Controller
         // $data = Post::found($request->all());   'name','LIKE',"%{$search}%"
 
 
-        $data  = Post::where('text','LIKE', "%{$request->search}%")->get();
+        $data  = Post::where ('text','LIKE', "%{$request->search}%")
+                     ->where ('location','LIKE', "%{$request->location}%")
+                     ->get();
 
         // return response()->json(null,201);
 

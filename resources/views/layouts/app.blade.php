@@ -36,6 +36,7 @@
                             <option value="Восток">Восток</option>
                             <option value="Вострецово">Вострецово</option>
                             <option value="Новопокровка">Новопокровка</option>
+                            <option value="Дальнереченск">Дальнереченск</option>
                         </select>
 
                         <input class="form-control mx-2"  name="search"  type="search" placeholder="поиск" aria-label="Search">

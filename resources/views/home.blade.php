@@ -18,7 +18,9 @@
 
 
                                 <div class="card-body">
+                                    <p class="card-text">{{ $post->name }}</p>
                                     <p class="card-text">{{ $post->text }}</p>
+                                    <p class="card-text">{{ $post->location }}</p>
                                     <div class="d-flex justify-content-between align-items-center">
                                         <div class="btn-group">
                                             <a  class="btn btn-sm btn-outline-secondary"

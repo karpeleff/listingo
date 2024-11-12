@@ -9,6 +9,7 @@
                     <form  action="{{ route('store') }}"  method="post"  >
 
                         {{ csrf_field() }}
+
                         <input  type="text"  name="name"  class="form-control m-2 "  placeholder="Name" />
 
                 <div class="form-group">
@@ -19,8 +20,6 @@
                 </div>
                         <div class="form-group ">
 
-
-
                             <select class="form-select m-2  " aria-label="Default select example "  name="location"  >
                                 <option selected  value="Район"  >Район</option>
                                 <option value="Рощино">Рощино</option>
@@ -28,7 +27,7 @@
                                 <option value="Восток">Восток</option>
                                 <option value="Вострецово">Вострецово</option>
                                 <option value="Новопокровка">Новопокровка</option>
-
+                                <option value="Дальнереченск">Дальнереченск</option>
 
                             </select>
 

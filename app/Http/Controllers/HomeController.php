@@ -24,8 +24,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $data = Post::all();
+       // $data = Post::all();
        // return view('home');
+
+        $data = Post::offset(0)->limit(10)->get();
         return view('home')->with('posts', $data);
     }
 
