@@ -7,6 +7,14 @@
 
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
 
+                    @if (count($posts) === 1)
+
+                    @elseif (count($posts) > 1)
+                    
+                    @else
+                      Ничего не нашлось (
+                    @endif
+
                     @foreach ($posts as $post)
 
                         <div class="col">
