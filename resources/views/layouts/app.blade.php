@@ -22,7 +22,7 @@
             <div class="container">
 
 
-                <a class="navbar-brand  " href="{{ url('/home') }}">
+                <a class="navbar-brand  " href="{{ url('/') }}">
                    ServiceBox
                 </a>
                 <div class="m-2">
