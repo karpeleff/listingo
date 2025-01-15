@@ -21,13 +21,18 @@
                             <div class="card shadow-sm">
                                 <img
                                     class="fit-picture"
-                                    src=" {{ asset('img/logo.png')}}"
+                                    src=" {{ asset('img/'.$post->img)}}"
                                     alt="Grapefruit slice atop a pile of other slices" />
 
 
                                 <div class="card-body">
                                     <p class="card-text">{{ $post->name }}</p>
                                     <p class="card-text">{{ $post->text }}</p>
+
+                                    <div class="btn-group">
+                                        <a  class="btn btn-sm btn-outline-secondary" >Заказать</a>
+                                    </div>
+
                                     <p class="card-text">{{ $post->location }}</p>
                                     <div class="d-flex justify-content-between align-items-center">
                                         <div class="btn-group">

@@ -51,7 +51,21 @@ class HomeController extends Controller
 
     public function store(Request $request)
     {
-        $data = Post::create($request->all());
+      //  $data = Post::create($request->all());
+        $imageName = time().'.'.$request->image->extension();
+        $request->image->move(public_path('img'), $imageName);
+
+        $data = new Post;
+
+        $data->name = $request->name;
+        $data->contact = $request->contact;
+        $data->text = $request->text;
+        $data->location = $request->location;
+        $data->img = $imageName;
+        $data->save();
+
+
+        // Public Folder
 
        // return response()->json(null,201);
 

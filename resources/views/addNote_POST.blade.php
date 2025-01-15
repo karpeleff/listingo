@@ -6,7 +6,7 @@
             <div class="card-header"> Добавить Контакт </div>
             <div class="card-body">
                 <div class="form-group   ">
-                    <form  action="{{ route('store') }}"  method="post"  >
+                    <form  action="{{ route('store') }}"  method="post"  enctype="multipart/form-data" >
 
                         {{ csrf_field() }}
 
@@ -35,7 +35,7 @@
                         </div>
                 <div class="form-group ">
 
-                    <input   type="text"   name="img" class="form-control m-2 "  placeholder="img"   value="pic"  />
+                    <input type="file" class="form-control" name="image" />
                 </div>
                 <button type="submit" class="btn btn-primary m-2  ">
                    Сохранить

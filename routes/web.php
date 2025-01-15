@@ -32,6 +32,7 @@ Route::post('/store', [App\Http\Controllers\HomeController::class, 'store'])->na
 Route::post('/search', [App\Http\Controllers\Customer::class, 'search'])->name('search');
 Route::get('/storeview', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
 Route::get('/del/{id}', [App\Http\Controllers\HomeController::class, 'del'])->name('del');
+Route::get('note_view', [App\Http\Controllers\HomeController::class, 'note_view'])->name('note_view');
 
 
 Route::group(['middleware' => ['auth']], function() {
