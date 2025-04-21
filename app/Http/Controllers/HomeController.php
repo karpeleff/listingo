@@ -61,6 +61,7 @@ class HomeController extends Controller
         $data->contact = $request->contact;
         $data->text = $request->text;
         $data->location = $request->location;
+        $data->type = $request->type;
         $data->img = $imageName;
         $data->save();
 

@@ -33,6 +33,19 @@
 
 
                         </div>
+                        <div class="form-group ">
+
+                            <select class="form-select m-2  " aria-label="Default select example "  name="type"  >
+                                <option selected  value="1"  >Услуга</option>
+                                <option value="2">Кафе</option>
+                                <option value="3">Магазин</option>
+                                <option value="4">бла</option>
+                                <option value="5">бла бла</option>
+
+                            </select>
+
+
+                        </div>
                 <div class="form-group ">
 
                     <input type="file" class="form-control" name="image" />
